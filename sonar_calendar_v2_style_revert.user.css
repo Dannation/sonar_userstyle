@@ -1,0 +1,103 @@
+/* ==UserStyle==
+@author         dannation
+@namespace      dannation
+@name           sonar_calendar_v2_style_revert
+@updateURL      https://dannation.keybase.pub/usercss/sonar_calendar_v2_style_revert.user.css
+@version        1.0.1
+==/UserStyle== */
+
+@-moz-document url-prefix("https://bigredne.sonar.software/app#/schedule/edit") {
+    /*  FOR THE MAP LAYER  */
+	#router--wrapper > .page--layout > div > div > div > div > div > .scheduleBody > .map {
+		position: absolute;
+		z-index: 4004;
+        /*			To adjust how many rows of the schedule are visible				*/
+        /*			increment the following value by 82px up or down,				*/
+        /*		top: 344px;    <<  For example, this should show 1 visible row		*/
+        /*		top: 426px;    <<  and this should show 2 visible rows				*/
+        /*		top: 508px;    <<  and this should show 3 rows, etc.   				*/
+        top: 590px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+	#router--wrapper > .page--layout > div > div > div > div > div > .scheduleBody > .calendar {
+		width: 100% !important;
+		z-index: 4004;
+		max-width: 100% !important;
+	}
+	.scheduling--dispatcher>.scheduleBody .calendar {
+		flex: 0 0 100%;
+	}
+	
+	.scheduling--dispatcher>.scheduleBody .calendar>.body--wrapper>.body .schedule--row .schedule {
+		background-color: #021627;
+	}
+	
+	/* POPUP SIDEBAR LAYER */
+	#app--sidebar--wrapper {
+		z-index: 4004;
+	}
+	
+	#router--wrapper > .page--layout > div > div > div > .snackBar--wrapper.snackBar--controls--wrapper.schedule-changes {
+		z-index: 4000;
+	}
+
+	.vdatetime-popup {
+		top: 14% !important;
+		left: 40%;
+	}
+
+	.input--dateTime .dateTimeWrapper .dateTimeInput .vdatetime-popup__actions {
+		position: absolute;
+		right: 0px !important;
+		top: 10px !important;
+		padding-top: 0px;
+		padding-right: 4px;
+		/*padding-top: 0px !important;*/
+	}
+	
+	.vdatetime-calendar__month__weekday, .vdatetime-calendar__month__day {
+		line-height: 10px !important;
+	}
+	
+	.input--dateTime .dateTimeWrapper .dateTimeInput .vdatetime-calendar__month__day {
+		font-weight: 600;
+	}
+	
+	.vdatetime-calendar__month {
+		padding: 0px;
+		z-index: 400000 !important;
+	}
+	
+	#router--wrapper > div.page--layout > div > div > div > div.snackBar--wrapper.snackBar--controls--wrapper.schedule-changes,
+	#router--wrapper > .page--layout > div > div > div > div > div > .scheduleBody > .calendar > .header > .currentDay > div > div > div > .vdatetime.dateTimeInput > div {
+		z-index: 40000 !important;
+	}
+	
+	.mainLayout--wrapper>.content>div>.dataTable--wrapper, .mainLayout--wrapper>.content>.dataTable--wrapper {
+		max-width: 100%;
+		/*padding-right: 0px;*/
+	}
+	
+	#router--wrapper > .page--layout > div > div > div > div > div > .scheduleBody > .calendar > .body--wrapper > .body > div:nth-child(3) > .schedule > .scheduling--jobWrapper > .scheduling--job.scheduling--job--calendar.active {
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	
+	.scheduling--jobWrapper .driveTimeElement {
+		top: 25%;
+		height: 50%;
+	}
+	
+	.scheduling--job.scheduling--job--calendar {
+		padding-top: 0px;
+		padding-bottom: 0px;
+		margin: 0px;
+		height: 80px;
+	}
+	
+	#app--sidebar--wrapper.show {
+		animation: app--sidebar--show 0s cubic-bezier(0, 0, 0, 1) forwards;
+	}
+}
