@@ -2,11 +2,12 @@
 @author         dannation
 @namespace      dannation
 @name           sonar_calendar_v2_style_revert
-@updateURL      https://dannation.keybase.pub/usercss/sonar_calendar_v2_style_revert.user.css
-@version        1.0.1
+@updateURL      https://github.com/Dannation/sonar_userstyle/raw/main/sonar_calendar_v2_style_revert.user.css
+@version        1.0.2
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://bigredne.sonar.software/app#/schedule/edit") {
+    /*  You'll want to replace ^^-'bigredne'-^^ with whatever you Sonar domain  */
     /*  FOR THE MAP LAYER  */
 	#router--wrapper > .page--layout > div > div > div > div > div > .scheduleBody > .map {
 		position: absolute;
